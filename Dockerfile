@@ -11,8 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy all files
 COPY . .
 
-# Expose the port FastAPI will run on
+# Expose the correct port
 EXPOSE 8000
 
-# Run FastAPI app
+# Start FastAPI app
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
